@@ -12,5 +12,5 @@ I hope that it will be useful for React-Native developers.
 [Dan Abramov video on react-redux]: <https://www.youtube.com/watch?v=VJ38wSFbM3A>
 [redux todos example]: <https://github.com/reactjs/redux/tree/master/examples/todos>
 [gif-adding-todo]: ./add-a-todo.gif
-[mkv-chrome-console]: ./chrome_console.mkv
+[mkv-chrome-console]: ./chrome_console.gif
 
