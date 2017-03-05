@@ -14,3 +14,5 @@ I hope that it will be useful for React-Native developers.
 [gif-adding-todo]: ./add-a-todo.gif
 [mkv-chrome-console]: ./chrome_console.gif
 
+> This project is licensed under the terms of the MIT license.
+
