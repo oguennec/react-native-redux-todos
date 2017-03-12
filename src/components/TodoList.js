@@ -6,7 +6,7 @@ import Todo from './Todo';
 const TodoList = ({ todos, onTodoClick }) => (
 
   <List style={{flexDirection: 'row'}}>
-      {todos.map(todo => <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)} /> )}
+    {todos.map(todo => <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)} /> )}
   </List>
 );
 

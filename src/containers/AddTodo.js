@@ -1,91 +1,49 @@
-import React from 'react';
-import { Form, TouchableHighlight, Input, StyleSheet, Text, TextInput, View } from 'react-native';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { addTodo } from '../actions';
+import { addTodo, getNextTodoIdIfNeeded } from '../actions';
+import TodoInput from '../components/TodoInput';
 
-let AddTodo = ({ dispatch }) => {
-  let textInput;
+class AddTodo extends Component {
 
-  let onChange = (e) => {
-    textInput = e;
-  };
-
-  let onPress = () => {
-    dispatch(addTodo(textInput));
-    //textInput = '';
-  };
-
-//<TextInput style={styles.textInput} onChangeText={onChange} ref={input => textInput = input} placeholder=" enter a todo" />
-
-  return (
-    <View>
-      <TextInput style={styles.textInput} onChangeText={onChange} placeholder=" enter a todo" />
-      <TouchableHighlight style={styles.button} onPress={onPress}>
-          <Text style={styles.buttonText}>
-          Add Todo
-        </Text>
-      </TouchableHighlight>
-    </View>
-  );
-};
-
-const styles = StyleSheet.create({
-  textInput: {
-    height: 50,
-    alignSelf: 'stretch',
-    marginTop: 10,
-    padding: 4,
-    fontSize: 18,
-    borderWidth: 1,
-    borderColor: '#48BBEC',
-    borderRadius: 0,
-    color: '#48BBEC',
-  },
-  button: {
-    height: 50,
-    backgroundColor: '#48BBEC',
-    borderColor: '#48BBEC',
-    alignSelf: 'stretch',
-    marginTop: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 5,
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 24,
+  constructor(props) {
+    super(props);
+    this.state = {
+      textInput: ''
+    };
   }
-});
+  
+  static propTypes = {
+    todos: PropTypes.array.isRequired,
+    nextTodoId: PropTypes.number.isRequired,
+    dispatch: PropTypes.func.isRequired
+  }
 
+  componentWillReceiveProps(nextProps) {
+    const { dispatch } = nextProps;
+    dispatch(getNextTodoIdIfNeeded());
+  }
 
-    //  <TouchableHighlight onPress={onPress}>
-    //      <Text>
-    //      Add Tod
-    //    </Text>
-    //  </TouchableHighlight>
+  handleChangeText = (e) => {
+    textInput = e;
+  }
 
-    // <View>
-    //   <Form
-    //     onSubmit={(e) => {
-    //       e.preventDefault();
-    //       if (!input.value.trim()) {
-    //         return;
-    //       }
-    //       dispatch(addTodo(input.value));
-    //       input.value = '';
-    //     }}
-    //   >
-    //     <Input
-    //       ref={(node) => {
-    //         input = node;
-    //       }}
-    //     />
-    //     <Button type="submit">
-    //       Add Todo
-    //     </Button>
-    //   </Form>
-    // </View>
+  handlePress = () => {
+    const { dispatch, todos, nextTodoId } = this.props;
+    if (nextTodoId) {
+      this.props.dispatch(addTodo(textInput, nextTodoId));
+    }     
+  }
 
-AddTodo = connect()(AddTodo);
+  render() {
+    return (
+      <TodoInput onChangeText={this.handleChangeText} onPress={this.handlePress} />
+    )
+  }
+}
 
-export default AddTodo;
+const mapStateToProps = state => ({
+   todos: state.todos,
+   nextTodoId: state.nextTodoId,
+})
+
+export default connect(mapStateToProps)(AddTodo);

@@ -10,7 +10,6 @@ const todo = (state, action) => {
       if (state.id !== action.id) {
         return state;
       }
-
       return {
         ...state,
         completed: !state.completed,
@@ -29,8 +28,10 @@ const todos = (state = [], action) => {
       ];
     case 'TOGGLE_TODO':
       return state.map(t =>
-        todo(t, action),
+        todo(t, action)
       );
+    case 'LOAD_TODOS_SUCCESS':
+      return action.todos;
     default:
       return state;
   }

@@ -11,15 +11,14 @@ const Link = ({ active, color, iconName, underlayColor, reverseColor, onClick })
         raised
         color={color}
         underlayColor={underlayColor}
-        type='ionicon'
+        type="ionicon"
         name={iconName}
         reverseColor={reverseColor}
         onPress={(e) => {
           e.preventDefault();
           onClick();
         }}
-      >
-      </Icon>
+      />
     </View>
   );
 };
@@ -32,9 +31,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
     paddingTop: 0,
     padding: 10,
-  },
-  containerButton: {
-    flex: 3,
   }
 });
 
