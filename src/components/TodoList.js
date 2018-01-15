@@ -1,11 +1,11 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import * as PropTypes from 'prop-types';
 import { ListView, Text, View } from 'react-native';
 import { List } from 'react-native-elements';
 import Todo from './Todo';
 
 const TodoList = ({ todos, onTodoClick }) => (
-
-  <List style={{flexDirection: 'row'}}>
+  <List style={{flexDirection: 'column', flex: 6, marginTop: 20}}>
     {todos.map(todo => <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)} /> )}
   </List>
 );

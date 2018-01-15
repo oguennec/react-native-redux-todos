@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import * as PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addTodo, getNextTodoIdIfNeeded } from '../actions';
 import TodoInput from '../components/TodoInput';

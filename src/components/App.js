@@ -17,15 +17,14 @@ const App = () => (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     backgroundColor: '#F5FCFF',
     paddingTop: 0,
     padding: 10,
   },
   heading: {
     fontSize: 20,
-    margin: 10,
-    marginBottom: 20,
+    marginTop: 40,
     textAlign: 'center',
   }
 });

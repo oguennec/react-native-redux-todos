@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import * as PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableHighlight, TextInput, View } from 'react-native';
 
 const TodoInput = ({ onChangeText, onPress }) => {
@@ -6,7 +7,7 @@ const TodoInput = ({ onChangeText, onPress }) => {
   const { button, buttonText,textInput } = styles;
 
     return (
-      <View>
+      <View style={styles.container}>
         <TextInput style={textInput} onChangeText={onChangeText} placeholder=" enter a todo" />
         <TouchableHighlight style={button} onPress={onPress}>
           <Text style={buttonText}>
@@ -23,6 +24,11 @@ TodoInput.propTypes = {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 3,
+    marginTop: 40,
+    justifyContent: 'center'
+  },
   textInput: {
     height: 50,
     alignSelf: 'stretch',
@@ -39,7 +45,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#48BBEC',
     borderColor: '#48BBEC',
     alignSelf: 'stretch',
-    marginTop: 10,
+    marginTop: 20,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 5,

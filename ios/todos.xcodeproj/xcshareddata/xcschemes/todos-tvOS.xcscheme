@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "searchgithub-tvOS.app"
-               BlueprintName = "searchgithub-tvOS"
-               ReferencedContainer = "container:searchgithub.xcodeproj">
+               BuildableName = "todos-tvOS.app"
+               BlueprintName = "todos-tvOS"
+               ReferencedContainer = "container:todos.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "searchgithub-tvOSTests.xctest"
-               BlueprintName = "searchgithub-tvOSTests"
-               ReferencedContainer = "container:searchgithub.xcodeproj">
+               BuildableName = "todos-tvOSTests.xctest"
+               BlueprintName = "todos-tvOSTests"
+               ReferencedContainer = "container:todos.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "searchgithub-tvOSTests.xctest"
-               BlueprintName = "searchgithub-tvOSTests"
-               ReferencedContainer = "container:searchgithub.xcodeproj">
+               BuildableName = "todos-tvOSTests.xctest"
+               BlueprintName = "todos-tvOSTests"
+               ReferencedContainer = "container:todos.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "searchgithub-tvOS.app"
-            BlueprintName = "searchgithub-tvOS"
-            ReferencedContainer = "container:searchgithub.xcodeproj">
+            BuildableName = "todos-tvOS.app"
+            BlueprintName = "todos-tvOS"
+            ReferencedContainer = "container:todos.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "searchgithub-tvOS.app"
-            BlueprintName = "searchgithub-tvOS"
-            ReferencedContainer = "container:searchgithub.xcodeproj">
+            BuildableName = "todos-tvOS.app"
+            BlueprintName = "todos-tvOS"
+            ReferencedContainer = "container:todos.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "searchgithub-tvOS.app"
-            BlueprintName = "searchgithub-tvOS"
-            ReferencedContainer = "container:searchgithub.xcodeproj">
+            BuildableName = "todos-tvOS.app"
+            BlueprintName = "todos-tvOS"
+            ReferencedContainer = "container:todos.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
