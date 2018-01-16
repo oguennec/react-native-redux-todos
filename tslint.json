@@ -1,0 +1,18 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:latest",
+        "tslint-react",
+        "tslint-config-prettier",
+        "tslint-plugin-prettier",
+        "tslint-eslint-rules"
+    ],
+    "jsRules": {},
+    "rules": {
+        "prettier": [true, { "singleQuote": true }],
+        "no-constant-condition": true,
+        // override tslint-react rules here
+        "jsx-wrap-multiline": false
+      },
+    "rulesDirectory": []
+}

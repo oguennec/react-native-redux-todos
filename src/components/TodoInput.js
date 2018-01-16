@@ -25,8 +25,8 @@ TodoInput.propTypes = {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 3,
-    marginTop: 40,
+    flex: 1,
+    marginTop: 10,
     justifyContent: 'center'
   },
   textInput: {

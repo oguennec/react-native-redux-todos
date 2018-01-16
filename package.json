@@ -3,10 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "npm run pre-packager && node node_modules/react-native/local-cli/cli.js start",
+    "pre-packager": "rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
-    "test": "jest"
+    "test": "jest",
+    "lint": "tslint -c tslint.json -p tsconfig.json"
   },
   "dependencies": {
     "react": "16.2.0",
@@ -19,10 +21,24 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "@types/prop-types": "^15.5.2",
+    "@types/react": "^16.0.34",
+    "@types/react-native": "^0.52.0",
+    "@types/react-native-vector-icons": "^4.4.2",
     "babel-jest": "22.0.6",
     "babel-preset-react-native": "4.0.0",
     "jest": "22.0.6",
-    "react-test-renderer": "16.2.0"
+    "prettier": "^1.10.2",
+    "prettier-package-json": "^1.4.0",
+    "prop-types": "^15.6.0",
+    "react-native-typescript-transformer": "^1.2.1",
+    "react-test-renderer": "16.2.0",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.6.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "tslint-plugin-prettier": "^1.3.0",
+    "tslint-react": "^3.4.0",
+    "typescript": "^2.6.2"
   },
   "jest": {
     "preset": "react-native"
