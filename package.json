@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npm run pre-packager && node node_modules/react-native/local-cli/cli.js start",
-    "pre-packager": "rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json",
+    "pre-packager": "[ -e ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json ] && rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json || echo ''",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
     "test": "jest",
