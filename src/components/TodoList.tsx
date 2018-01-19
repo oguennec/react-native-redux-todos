@@ -18,17 +18,13 @@ export default class TodoList extends React.PureComponent<ITodoListProps> {
     return (
       <List style={{ flexDirection: 'column', flex: 6, marginTop: 20 }}>
         {todos.map(todo => (
-          <Todo
-            key={todo.id}
-            {...todo}
-            onClick={this.onClick.bind(this, todo)}
-          />
+          <Todo key={todo.id} {...todo} onClick={this.onClick(todo)} />
         ))}
       </List>
     );
   }
 
-  private onClick = (todo: any) => {
+  private onClick = (todo: any) => () => {
     const { onTodoClick } = this.props;
     return onTodoClick(todo.id);
   };
